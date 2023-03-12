@@ -1,0 +1,211 @@
+//<Переменные>=======================================>
+$md3: 767.98;
+$md4: 479.98;
+
+$mainColor: #E4E5EA;
+//</Переменные>=======================================>
+
+
+.preview {
+    padding: 25px 0 69px 0;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: $md3+px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__left {
+        @media (max-width: $md3+px) {
+            margin-bottom: 45px;
+        }
+    }
+
+    &__circle {
+        display: flex;
+        border-radius: 100%;
+        position: absolute;
+        width: 311px;
+        height: 311px;
+        left: -102px;
+        top: 150px;
+        background: #961A1A;
+        opacity: 0.5;
+        filter: blur(196px);
+        z-index: -1;
+    }
+}
+
+.left-preview {
+    &__body {
+        width: 365px;
+
+        @media (max-width: $md3+px) {
+            width: 100%;
+            text-align: center;
+        }
+
+        @media (max-width: $md4+px) {
+            text-align: start;
+        }
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 58px;
+        margin-bottom: 30px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 15px;
+        }
+
+        &-gradient {
+            background-clip: text;
+            background-image: linear-gradient(92deg, #FCB045 27.14%, #FF3F78 121.36%);
+            color: transparent;
+            font-weight: 900;
+            font-size: 48px;
+            line-height: 58px;
+        }
+
+        @media (max-width: $md3+px) {
+            font-weight: 400;
+            font-size: 36px;
+            line-height: 44px;
+        }
+    }
+
+    &__lable {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+.right-preview {
+    @media (max-width: $md4+px) {
+        width: 100%;
+    }
+
+    &__body {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+
+        @media (max-width: $md3+px) {
+            align-items: center;
+        }
+
+        @media (max-width: $md4+px) {
+            align-items: end;
+        }
+
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 40px;
+        text-align: right;
+
+        @media (max-width: $md3+px) {
+            text-align: left;
+        }
+
+        &-gradient {
+            background-clip: text;
+            background-image: linear-gradient(92deg, #FCB045 27.14%, #FF3F78 121.36%);
+            color: transparent;
+            text-transform: uppercase;
+        }
+    }
+
+    &__flex {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px -15px;
+    }
+
+    &__column {
+        padding: 15px 15px;
+        width: 50%;
+    }
+
+    &__btn {
+        margin-top: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        line-height: 19px;
+        text-align: center;
+        color: $mainColor;
+        width: 262px;
+        height: 61px;
+        background: #4077F3;
+
+        @media (max-width: $md4+px) {
+            display: none;
+        }
+    }
+}
+
+.item-preview {
+
+    &__title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+        text-align: right;
+
+        @media (max-width: $md3+px) {
+            text-align: left;
+        }
+
+
+        @media (max-width: $md4+px) {
+            display: flex;
+            align-items: center;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 16px;
+
+            &::before {
+                content: '';
+                display: block;
+                margin-right: 5px;
+                width: 10px;
+                height: 1px;
+                background: linear-gradient(92deg, #FCB045 27.14%, #FF3F78 121.36%);
+            }
+        }
+    }
+
+    &__text {
+        font-family: 'Montserrat';
+        font-weight: 400;
+        line-height: 20px;
+        text-align: right;
+
+        @media (max-width: $md3+px) {
+            text-align: left;
+        }
+
+        @media (max-width: $md4+px) {
+            display: none;
+        }
+    }
+}

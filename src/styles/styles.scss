@@ -1,0 +1,73 @@
+@import '../styles/icons.scss';
+@import '../styles/null.scss';
+@import '../styles/header.scss';
+@import '../styles/preview.scss';
+@import '../styles/footer.scss';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+//<Шрифт по умолчанию>===========================>
+$fontFamaly: "Inter", sans-serif;
+$fontSize: 16px;
+//</Шрифт по умолчанию>===========================>
+
+//<Переменные>=======================================>
+$minWidth: 320;
+$maxWidth: 1440;
+$maxWidthContainer: 1172;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+$mainColor: #E4E5EA;
+$blackColor: #0E1014;
+$gradientColor: linear-gradient(92deg, #FCB045 27.14%, #FF3F78 121.36%), #E4E5EA;
+//</Переменные>=======================================>
+
+
+
+
+//<Основная сетка>=======================================>
+body {
+    font-family: $fontFamaly;
+    font-size: $fontSize;
+    color: $mainColor ;
+    background-color: $blackColor;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: $maxWidthContainer + 12px;
+    padding: 0 15px;
+    margin: 0 auto;
+
+    @media (max-width: $md1 + px) {
+        max-width: 970px;
+    }
+
+    @media (max-width: $md2+px) {
+        max-width: 750px;
+    }
+
+    @media (max-width: $md3+px) {
+        max-width: none;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+}
+
+//</Основная сетка>=======================================>
+
+.page {
+    flex: 1 1 auto;
+}

@@ -1,0 +1,115 @@
+.footer {
+    padding: 55px 0 20px 0;
+
+    @media (max-width: $md4+px) {
+        background: $blackColor;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: $md3+px) {
+            flex-wrap: wrap;
+        }
+
+    }
+
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        font-family: 'Montserrat';
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: right;
+
+        a {
+            text-decoration-line: underline;
+            color: $mainColor;
+        }
+
+        @media (max-width: $md3+px) {
+            text-align: left;
+        }
+    }
+}
+
+.item-footer {
+    margin-bottom: 33px;
+
+    &-end {
+        text-align: right;
+
+        @media (max-width: $md3+px) {
+            text-align: left;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #656566;
+        margin-bottom: 20px;
+
+        @media (max-width: $md4+px) {
+            font-size: 12px;
+            line-height: 15px;
+        }
+    }
+
+    &__lists {
+        display: flex;
+
+    }
+
+    &__list {
+        &:not(:last-child) {
+            margin-right: 50px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+
+    }
+
+    &__link {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: $mainColor;
+        transition: all 0.3s ease 0s;
+
+        &:hover {
+            color: rgba(161, 93, 207);
+        }
+
+        @media (max-width: $md4+px) {
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+
+    &__social {
+        margin: 20px 0;
+
+        a:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+
+    &__icon {
+        color: $mainColor;
+        font-size: 13px;
+        transition: all 0.3s ease 0s;
+
+        &:hover {
+            color: rgba(161, 93, 207);
+        }
+    }
+}
